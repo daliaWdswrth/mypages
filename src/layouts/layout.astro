@@ -1,0 +1,36 @@
+---
+import Header from "./header.astro";
+import Footer from "./footer.astro";
+import BackgroundImages from "../components/bgImages.astro";
+import MobileHeader from "./mobileHeader.astro";
+import DesktopSidebar from "./navBar.astro";
+import "../styles/global.css";
+import "../styles/index.css";
+---
+
+<!doctype html>
+<html lang="en">
+    <Header />
+
+    <body class="bg-gray-50 antialiased text-pretty relative overflow-x-hidden">
+        <BackgroundImages />
+
+        <MobileHeader />
+        
+        <div
+            class="grid grid-rows-[max-content_1fr] sm:grid-rows-none sm:grid-cols-[1fr_max-content] sm:gap-x-8 sm:max-w-3xl sm:mx-auto min-h-dvh relative z-10"
+        >
+            <main class="sm:pt-14 pr-2 max-sm:pl-4 sm:pl-6 max-sm:mt-4 max-sm:min-h-[calc(100dvh-theme(spacing.16))] flex flex-col sm:max-w-4xl">
+                <div class="flex-1">
+                    <slot />
+                </div>
+                
+                <div class="mt-auto pt-8">
+                    <Footer />
+                </div>
+            </main>
+            <DesktopSidebar />
+        </div>
+
+    </body>
+</html>

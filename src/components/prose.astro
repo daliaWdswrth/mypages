@@ -1,0 +1,38 @@
+<div class="@container">
+    <div class="prose">
+        <slot />
+    </div>
+</div>
+
+
+<script>
+    document.querySelectorAll(".prose img").forEach((img) => {
+        img.classList.add("cursor-zoom-in", "hover:opacity-75", "transition-opacity");
+        
+        img.addEventListener("click", () => {
+            const overlay = document.createElement("div");
+            overlay.innerHTML = `
+                <div class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center">
+                    <button class="absolute top-4 right-4 text-white text-4xl w-12 h-12 bg-black/50 rounded-full hover:bg-black/75 cursor-pointer">×</button>
+                    <img src="${img.src}" class="max-w-[90vw] max-h-[90vh] active:cursor-grabbing select-none" draggable="false">
+                </div>
+            `;
+            
+            document.body.appendChild(overlay);
+            document.body.style.overflow = "hidden";
+            
+            const modal = overlay.firstElementChild;
+
+            const close = () => {
+                document.body.style.overflow = "";
+                overlay.remove();
+            };
+            
+            modal.querySelector("button").onclick = close;
+            modal.onclick = (e) => e.target === modal && close();
+            document.onkeydown = (e) => e.key === "Escape" && close();
+
+            
+        });
+    });
+</script>

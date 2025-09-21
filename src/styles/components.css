@@ -1,0 +1,597 @@
+@layer components {
+    .btn-primary {
+        @apply px-6 py-3 rounded-lg font-medium transition-all;
+        background-color: theme(--color-cyan);
+        color: white;
+    }
+  
+    .btn-primary:hover {
+        @apply scale-105;
+        box-shadow: var(--shadow-custom);
+    }
+
+    /* some project and portfolio componenets */
+    .project-card {
+        @apply relative mt-2;
+    }
+
+    .project-title {
+        @apply  font-sans text-xl decoration-gray-300 hover:decoration-gray-500 transition-colors;
+    }
+
+    .tech-tag {
+        @apply inline-block px-2 py-1 text-xs text-gray-700 rounded;
+        background-color: var(--color-gray-blue);
+    }
+
+    .tech-tag-large {
+        @apply inline-block px-3 py-1 text-xs bg-blue-100 text-blue-800 rounded-full;
+    }
+
+    .tool-tag {
+        @apply inline-block px-3 py-1 text-sm rounded-full;
+        background-color: var(--color-gray-blue);
+    }
+
+    .project-links {
+        @apply mt-1 space-x-4 text-sm;
+    }
+
+    .project-link {
+        @apply hover:text-blue-800 underline transition-colors;
+        color: var(--color-cyan);
+    }
+
+    .project-link--live {
+        @apply hover:text-green-800 underline transition-colors;
+        color: var(--color-cyan);
+    }
+
+    /* blog layout */
+    .month-section {
+        @apply mb-8;
+    }
+
+    .blog-post-item {
+        @apply mt-2 first:mt-0;
+    }
+
+    .post-tag-inline {
+        @apply inline-block px-2 py-0.5 text-xs text-gray-600 rounded;
+        @apply flex-shrink-0; /* keep tag text from wrapping awkwardly */
+    }
+
+    /* recent posts */
+    .recent-posts-section {
+        @apply mt-15 pt-8 border-t border-gray-200;
+    }
+
+    .recent-posts-grid {
+        @apply grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+    }
+
+    .recent-post-card-horizontal {
+        @apply border border-gray-200 rounded-lg hover:shadow-md transition-shadow;
+        @apply flex flex-col h-full;
+    }
+
+    .recent-post-content {
+        @apply p-4 flex-1 flex flex-col; 
+    }
+
+    .recent-post-title {
+        @apply font-sans text-base text-gray-900 hover:text-gray-600 transition-colors;
+        @apply decoration-gray-300 hover:decoration-gray-500;
+        @apply line-clamp-2;
+    }
+
+    .recent-post-date {
+        @apply text-xs text-gray-400 mt-2 block;
+    }
+
+    .recent-post-excerpt {
+        @apply text-gray-500 mt-3 text-sm leading-relaxed flex-1;
+        @apply line-clamp-3;
+    }
+
+    .recent-post-tags {
+        @apply flex flex-wrap gap-1 mt-3;
+    }
+
+    /* (keeping for backwards compatibility) */
+    .recent-post-card {
+        @apply p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow;
+    }
+
+    .post-tag {
+        @apply inline-block px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded;
+    }
+
+    /* tag filters */
+    .tag-filter-container {
+        @apply mb-8 p-4;
+        background: transparent;
+    }
+
+    .tag-filter-title {
+        @apply text-sm font-medium text-gray-700 mb-3;
+    }
+
+    .tag-filter-list {
+        @apply flex flex-wrap gap-3;
+    }
+
+    .tag-filter-item {
+        @apply px-3 py-1 text-sm rounded-full transition-colors cursor-pointer;
+        @apply bg-white/80 backdrop-blur-sm border border-gray-300 text-gray-700 hover:border-gray-400;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .tag-filter-item.active {
+        @apply border-gray-100 text-white;
+        background-color: var(--color-cyan);
+    }
+
+    .tag-filter-item:hover {
+        @apply bg-white/90;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .tag-filter-clear {
+        @apply text-sm text-gray-500 hover:text-gray-700 underline cursor-pointer;
+    }
+
+    /* portfolio gallery */
+    .portfolio-grid {
+        /*  CSS columns for masonry layout */
+        column-count: 1;
+        column-gap: 0.5rem;
+        column-fill: balance;
+    }
+
+    @media (min-width: 640px) {
+        .portfolio-grid {
+            column-count: 2;
+            column-gap: 0.75rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .portfolio-grid {
+            column-count: 3;
+            column-gap: 1rem;
+        }
+    }
+
+    .portfolio-card {
+        @apply relative overflow-hidden rounded-lg border border-gray-200 mb-3;
+        @apply hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
+        /* stop column breaks inside cards */
+        break-inside: avoid;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .portfolio-image-natural {
+        @apply w-full object-cover transition-transform duration-300;
+        height: auto;
+        display: block;
+    }
+
+    .portfolio-overlay {
+        @apply absolute inset-0 transition-colors duration-300 flex items-end;
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .portfolio-card:hover .portfolio-overlay {
+        background-color: var(--color-pink);
+        opacity: 0.8;
+    }
+
+    .portfolio-overlay-content {
+        @apply p-2 text-white opacity-0 hover:opacity-100 transition-opacity duration-300;
+    }
+
+    .portfolio-overlay-title {
+        @apply font-serif text-xl font-medium mb-1;
+    }
+
+    .portfolio-overlay-tags {
+        @apply flex flex-wrap gap-1;
+    }
+
+    .portfolio-overlay-tag {
+        @apply text-xl bg-white/20 px-2 py-1 rounded;
+    }
+
+    /* page headers */
+    .page-header {
+        @apply mb-6 pb-6 border-b border-gray-200;
+    }
+
+    .page-title {
+        @apply font-script text-6xl font-bold mb-3 mt-2;
+    }
+
+    .page-meta {
+        @apply flex flex-wrap items-center gap-4 text-sm text-gray-600;
+    }
+
+    .category-tag {
+        @apply px-2 py-1 bg-gray-100 text-gray-700 rounded;
+    }
+
+    /* action buttons */
+    .btn-github {
+        @apply inline-flex items-center px-4 py-2 text-white rounded-lg hover:bg-gray-800 transition-colors;
+    }
+
+    .btn-demo {
+        @apply inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors;
+    }
+
+    .btn-back {
+        @apply inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors;
+    }
+
+    /* featured images */
+    .featured-image-container {
+        @apply mb-6 rounded-lg overflow-hidden border border-gray-200;
+    }
+
+    .featured-image {
+        @apply w-full h-auto max-h-[70vh] object-contain bg-gray-50;
+    }
+
+    /* section headers */
+    .section-header {
+        @apply text-3xl mt-5 mb-6 font-sans;
+    }
+
+    .month-header {
+        @apply -mb-1 mt-6 first-of-type:mt-2 text-gray-400 font-medium;
+    }
+
+    /* tools section */
+    .tools-section {
+        @apply mt-4;
+    }
+
+    .tools-label {
+        @apply text-sm font-medium text-gray-700 mb-2;
+    }
+
+    .tools-list {
+        @apply flex flex-wrap gap-2;
+    }
+
+    /* nav */
+    .nav-section {
+        @apply mt-12 pt-6 border-t border-gray-200;
+    }
+
+    /* section group */
+    .section-group {
+        @apply space-y-0;
+    }
+
+    /* status */
+    .status-error {
+        @apply bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4;
+    }
+
+    .status-warning {
+        @apply bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded mb-4;
+    }
+
+    .status-list {
+        @apply list-disc list-inside mt-2;
+    }
+}
+
+/* blog styles */
+.blog-toc-container {
+    @apply space-y-3;
+}
+
+.blog-toc-item {
+    @apply block;
+}
+
+.blog-toc-content {
+    @apply flex items-start gap-1 py-1;
+    min-height: 2.5rem;
+}
+
+.blog-toc-left {
+    @apply flex-shrink-0;
+    flex: 0 0 auto;
+    max-width: 65%;
+}
+
+.blog-toc-title {
+    @apply text-lg font-medium leading-tight decoration-dotted;
+    @apply hover:text-gray-500 transition-colors;
+    @apply decoration-gray-300 hover:decoration-gray-200;
+    display: block;
+}
+
+.blog-toc-tags {
+    @apply flex flex-wrap gap-1 mt-1;
+}
+
+/* adjust for mid-size screens later */
+.blog-toc-dots {
+    @apply flex-1 relative;
+    margin: 0.75rem 0.5rem 0 0.5rem;
+    height: 1px;
+    border-bottom: 2px dotted #d1d5db;
+    min-width: 2rem;
+}
+
+.blog-toc-right {
+    @apply flex-shrink-0 flex items-center;
+    margin-top: 0.1rem;
+}
+
+.blog-toc-reading-time {
+    @apply text-sm font-medium text-gray-600 whitespace-nowrap;
+    @apply px-2 py-1 rounded;
+    background-color: var(--color-gray-cyan);
+}
+
+/* responsiveness adjustments */
+@media (max-width: 640px) {
+    .blog-toc-left {
+        max-width: 60%;
+    }
+
+    .blog-toc-title {
+        @apply text-base;
+    }
+
+    .blog-toc-reading-time {
+        @apply text-xs px-1.5 py-0.5;
+    }
+
+    .blog-toc-dots {
+        margin: 0.5rem 0.25rem 0 0.25rem;
+    }
+}
+
+/* hover effects */
+.blog-toc-item:hover .blog-toc-dots {
+    border-color: #9ca3af; /* Gray-400 */
+}
+
+.blog-toc-item:hover .blog-toc-reading-time {
+    background-color: var(--color-cyan);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-toc-dots-alt {
+    @apply flex-1 relative;
+    margin: 0.75rem 0.5rem 0 0.5rem;
+    height: 0;
+    overflow: hidden;
+}
+
+.blog-toc-dots-alt::before {
+    content: "························································································";
+    /* color: var(--color-pink); */
+    font-size: 0.875rem;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+
+/* flipbook styles */
+
+/* modal */
+.flipbook-modal {
+    @apply fixed inset-0 z-50 flex items-center justify-center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* make sure it's above mobile header */
+    z-index: 9999;
+}
+
+.flipbook-modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.flipbook-backdrop {
+    @apply absolute inset-0 bg-black;
+    opacity: 0.8;
+}
+
+.flipbook-content {
+    @apply relative z-10 flex flex-col items-center justify-center max-w-6xl max-h-screen p-4;
+    width: 100%;
+    height: 100vh;
+}
+
+/* book display */
+.book-display {
+    @apply bg-white dark:bg-gray-800 rounded-lg p-4 mb-4;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    max-height: calc(100vh - 120px); /* space for controls */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* single page layout */
+.single-page {
+    @apply flex items-center justify-center;
+    width: 100%;
+    height: 100%;
+}
+
+.single-page .book-page {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* douple spread layout */
+.double-spread {
+    @apply flex items-center justify-center;
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+}
+
+.left-page,
+.right-page {
+    max-width: calc(50% - 0.25rem);
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* control bar */
+.control-bar {
+    @apply flex items-center bg-white dark:bg-gray-800 rounded-full px-6 py-3;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+}
+
+.control-btn {
+    @apply px-4 py-2 mx-2 rounded-lg border-none cursor-pointer text-sm font-medium transition-all;
+    @apply bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600;
+}
+
+.control-btn:disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+
+.control-btn:disabled:hover {
+    @apply bg-gray-100 dark:bg-gray-700;
+}
+
+.close-btn {
+    background-color: var(--color-gray-cyan);
+    @apply text-white;
+}
+
+/* button styling */
+.open-flipbook-btn {
+    @apply inline-flex items-center px-4 py-2 text-white rounded-lg transition-colors cursor-pointer border-none;
+    background-color: var(--color-cyan);
+}
+
+.open-flipbook-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* mobile adjustments for books */
+@media (max-width: 768px) {
+    .flipbook-content {
+        padding: 0.5rem;
+        padding-top: 80px;
+        height: 100vh;
+        justify-content: space-between;
+    }
+
+    .book-display {
+        padding: 0.75rem;
+        /* prevent cutoff */
+        max-height: calc(100vh - 180px);
+        margin: 0;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .single-page {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .single-page .book-page {
+        max-width: 95%;
+        max-height: 95%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    /* mobile uses single page layout */
+    .double-spread {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .left-page,
+    .right-page {
+        max-width: 95%;
+        max-height: 45%;
+        object-fit: contain;
+        margin: 0;
+    }
+
+    .control-bar {
+        padding: 0.5rem 1rem;
+        margin: 0;
+        /* make sure controls stay at bottom */
+        flex-shrink: 0;
+        margin-bottom: env(safe-area-inset-bottom, 8px);
+    }
+
+    .control-btn {
+        padding: 0.5rem 0.75rem;
+        margin: 0 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    /* get rid of the transform that might cause issues */
+    .flipbook-modal.active .flipbook-content {
+        transform: none;
+    }
+}
+
+/* more for double spread layouts */
+.double-page-spread {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.book-page.double-page {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.double-width-mobile .book-page {
+/* need to fix for mobile scrolling (horizontal) */
+    max-width: none;
+    width: auto;
+    height: 80vh;
+    object-fit: contain;
+}
+
+.double-width-mobile {
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+}

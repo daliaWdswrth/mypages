@@ -1,0 +1,90 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getPortfolioItems } from "../../lib/projects";
+import Entry from "../../components/entry.astro";
+import SimpleFlipbook from "../../components/flipbook.astro";
+import Layout from "../../layouts/layout.astro";
+
+export const getStaticPaths = (async () => {
+    const portfolioItems = await getPortfolioItems({ includeDrafts: true });
+    return portfolioItems.map((item) => ({
+        params: { slug: item.slug },
+        props: { entry: item },
+    }));
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+const isBook = entry.data.type === "book" && entry.data.book_pages?.length > 0;
+---
+
+<Layout title={entry.data.title!}>
+    <div class="mb-8">
+        <div class="featured-image-container">
+            <img
+                src={entry.data.featured_image}
+                alt={entry.data.title}
+                class="featured-image"
+            />
+        </div>
+
+        <div class="portfolio-info">
+            <h1 class="text-4xl mb-3 font-semibold">
+                {entry.data.title}
+            </h1>
+            <div class="portfolio-meta">
+                {entry.data.date && (
+                    <time>
+                        {entry.data.date.toLocaleString("en-US", {
+                            timeZone: "UTC",
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                        })}
+                    </time>
+                )}
+
+                {entry.data.category && (
+                    <span class="category-tag ml-4">
+                        {entry.data.category}
+                    </span>
+                )}
+
+                {isBook && (
+                    <span class="category-tag ml-3">
+                        {entry.data.book_pages.length} pages
+                    </span>
+                )}
+            </div>
+            
+            {entry.data.tools && entry.data.tools.length > 0 && (
+                <div class="tools-section">
+                    <h3 class="tools-label font-semibold">Tools/Software/Medium:</h3>
+                    <div class="tools-list">
+                        {entry.data.tools.map((tool) => (
+                            <span class="tool-tag">
+                            {tool}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            )}
+            
+            {isBook && (
+                <div class="mt-4">
+                    <button id="open-flipbook" class="open-flipbook-btn">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                        View Book
+                    </button>
+                </div>
+            )}
+        </div>
+    </div>
+
+    <Entry entry={entry} preview={false} />
+
+    {isBook && (
+        <SimpleFlipbook pages={entry.data.book_pages} title={entry.data.title} />
+    )}
+</Layout>

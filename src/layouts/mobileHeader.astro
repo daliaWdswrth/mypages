@@ -1,0 +1,74 @@
+---
+import MyImage from "../components/myImage.astro";
+import NavLink from "../components/nav.astro";
+---
+
+<header class="sm:hidden sticky top-0 z-50 bg-gray-50/95 backdrop-blur-sm border-b border-gray-200 px-4 py-3 relative">
+    <div class="flex items-center justify-between">
+        <div class="flex-shrink-0">
+            <MyImage />
+            
+        </div>
+
+        <button 
+            id="mobile-menu-toggle"
+            class="p-2 rounded-md hover:bg-[var(--color-pink)] focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-label="Toggle menu"
+        >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <nav 
+    id="mobile-nav"
+    class="hidden absolute top-full left-0 right-0 bg-gray-50/95 backdrop-blur-sm border-b border-gray-200 px-4 py-4"
+    >
+        <div class="space-y-2">
+            <div class="pb-2 border-b border-gray-200">
+                <div class="space-x-3">
+                    <NavLink href="/blog" variant="primary">Blog</NavLink>
+                    <NavLink href="/projects" variant="primary">Projects</NavLink>
+                    <NavLink href="/portfolio" variant="primary">Portfolio</NavLink>
+                </div>
+            </div>
+            
+            
+            <div class="pt-2">
+                
+                <div class="space-x-3">
+                    <NavLink href="mailto:dalia.wadsworth.@tufts.edu" variant="secondary">Email</NavLink>
+                    <NavLink href="https://www.linkedin.com/in/dalia-wadsworth-80b36922a/" variant="secondary">LinkedIn</NavLink>
+                    <NavLink href="https://github.com/daliaWdswrth" variant="secondary">GitHub</NavLink>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+            
+            const svg = menuToggle.querySelector('svg path');
+            if (mobileNav.classList.contains('hidden')) {
+                svg.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // hamburger
+            } else {
+                svg.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // x
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+                mobileNav.classList.add('hidden');
+                const svg = menuToggle.querySelector('svg path');
+                svg.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            }
+        });
+    }
+</script>

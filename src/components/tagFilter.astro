@@ -1,0 +1,84 @@
+---
+interface Props {
+    tags: string[];
+}
+
+const { tags } = Astro.props;
+const allTags = [...new Set(tags.filter(Boolean))].sort();
+---
+
+{allTags.length > 0 && (
+    <div class="tag-filter-container">
+        <p class="tag-filter-title">Filter by tags:</p>
+        <div class="tag-filter-list">
+            <button class="tag-filter-item active" data-tag="all">
+                All Posts
+            </button>
+            {allTags.map((tag) => (
+                <button class="tag-filter-item" data-tag={tag}>
+                    {tag}
+                </button>
+            ))}
+        </div>
+    </div>
+)}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tagButtons = document.querySelectorAll('.tag-filter-item');
+        const postItems = document.querySelectorAll('.blog-post-item');
+        const monthSections = document.querySelectorAll('.month-section');
+
+        function filterPosts(selectedTag) {
+            postItems.forEach(item => {
+                if (selectedTag === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    const postTags = item.getAttribute('data-post-tags');
+                    if (postTags && postTags.includes(selectedTag)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+            
+            // hide months w/ no posts
+            monthSections.forEach(section => {
+                const visiblePosts = section.querySelectorAll('.blog-post-item[style="display: block"], .blog-post-item:not([style])');
+                const hasVisiblePosts = Array.from(visiblePosts).some(post => 
+                    selectedTag === 'all' || post.style.display !== 'none'
+                );
+                
+                if (selectedTag === 'all') {
+                    section.style.display = 'block';
+                } else {
+                    const sectionPosts = section.querySelectorAll('.blog-post-item');
+                    let hasMatchingPosts = false;
+                    
+                    sectionPosts.forEach(post => {
+                        const postTags = post.getAttribute('data-post-tags');
+                        if (postTags && postTags.includes(selectedTag)) {
+                            hasMatchingPosts = true;
+                        }
+                    });
+                    
+                    section.style.display = hasMatchingPosts ? 'block' : 'none';
+                }
+            });
+        }
+
+        tagButtons.forEach(button => {
+            button.addEventListener('click', function() {
+            const selectedTag = this.getAttribute('data-tag');
+            
+            // Update active state
+            tagButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter posts and sections
+            filterPosts(selectedTag);
+            });
+        });
+    });
+</script>

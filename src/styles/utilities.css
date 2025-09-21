@@ -1,0 +1,132 @@
+/* src/styles/utilities.css */
+@utility prose {
+    @apply font-sans text-lg @sm:text-xl leading-[1.5];
+
+    h1 {
+        
+    }
+
+    h2,
+    h3 {
+        @apply font-script font-bold !mt-4 !mb-6;
+        
+        
+        + * {
+            @apply !mt-0;
+        }
+    }
+
+
+    h2 {
+        @apply text-2xl leading-[1.2];
+    }
+
+    h3 {
+        @apply text-4xl leading-[1.5];
+    }
+
+    > p {
+        @apply my-5;
+    }
+
+    > :not(p),
+    > p:has(> img),
+    p > img {
+        @apply my-8;
+    }
+
+    :first-child {
+        @apply mt-2;
+    }
+
+    :last-child {
+        @apply mb-0;
+    }
+
+    ul {
+        @apply list-['_❥_'];
+    }
+
+    ol {
+        @apply list-decimal;
+    }
+
+    ul,
+    ol {
+        @apply mt-0;
+        @apply pl-5;
+    }
+
+    li {
+        @apply my-1;
+        
+        &::marker {
+            @apply text-gray-400;
+        }
+    }
+
+    a {
+        @apply underline;
+        color: var(--color-pink);
+    }
+
+    hr {
+        @apply h-auto mt-16 mb-13 border-none;
+
+        &::before {
+            content: "✮  ✮  ✮";
+            @apply block text-center text-gray-400;
+        }
+    }
+
+    img,
+    video {
+        @apply border border-gray-200;
+    }
+
+
+    pre {
+        @apply border border-gray-200 px-3 py-2 text-base leading-[1.5];
+    }
+
+    code:not(pre code) {
+        @apply bg-white border border-gray-200 text-lg px-1 py-0.5 break-words box-decoration-clone;
+        color: var(--color-cyan);
+    }
+
+    pre code {
+        @apply block p-4 rounded-lg text-green-200 text-sm;
+    }
+
+    mark {
+        @apply text-gray-900 px-1 rounded;
+        background-color: var(--color-light-yellow);
+    }
+
+    .text-pink {
+        color: var(--color-pink);
+    }
+
+
+
+
+
+    blockquote {
+        @apply italic border-l-4 pl-4 pt-2 pb-2.5;
+        background-color: var(--color-gray-blue);
+    }
+
+}
+
+/* icon utilities */
+@utility icon {
+    @apply w-4 h-4;
+}
+
+@utility icon-sm {
+    @apply w-3 h-3;
+}
+
+@utility icon-lg {
+    @apply w-5 h-5;
+}

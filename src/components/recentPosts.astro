@@ -1,0 +1,65 @@
+---
+import { getPosts } from "../lib/posts";
+
+interface Props {
+    limit?: number;
+    showExcerpt?: boolean;
+}
+
+const { limit = 3, showExcerpt = true } = Astro.props;
+
+let recentPosts = [];
+try {
+    const posts = await getPosts({ includeDrafts: false });
+    recentPosts = posts.slice(0, limit);
+} catch (error) {
+    console.error("Error loading recent posts:", error);
+}
+---
+
+{recentPosts.length > 0 && (
+    <section class="recent-posts-section">
+        <div class="flex items-center justify-between mb-1">
+            <h2 class="section-header font-script font-semibold font-color-pink">Recent Posts</h2>
+            <a href="/blog" class="text-sm text-gray-500 hover:text-gray-700 transition-colors">
+                View all →
+            </a>
+        </div>
+
+        <div class="recent-posts-grid">
+            {recentPosts.map((post) => (
+                <article class="recent-post-card-horizontal">
+                    <div class="recent-post-content">
+                        <h3>
+                            <a href={`/${post.slug}`} class="recent-post-title">
+                            {post.data.title}
+                            </a>
+                        </h3>
+                        
+                        {post.data.date && (
+                            <time class="recent-post-date">
+                                {post.data.date.toLocaleDateString("en-US", {
+                                    month: "short",
+                                    day: "numeric",
+                                    year: "numeric",
+                                })}
+                            </time>
+                        )}
+                        
+                        {showExcerpt && post.data.excerpt && (
+                            <p class="recent-post-excerpt">{post.data.excerpt}</p>
+                        )}
+                        
+                        {post.data.tags && post.data.tags.length > 0 && (
+                            <div class="recent-post-tags">
+                                {post.data.tags.slice(0, 2).map((tag) => (
+                                    <span class="post-tag">{tag}</span>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </article>
+            ))}
+        </div>
+    </section>
+)}

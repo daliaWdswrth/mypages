@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/layout.astro";
+import TagFilter from "../components/tagFilter.astro";
+import { getPosts } from "../lib/posts";
+
+const posts = await getPosts({ includeDrafts: false });
+
+// get rendered content for each post to calculate reading time
+const postsWithReadingTime = await Promise.all(
+    posts.map(async (post) => {
+        try {
+            const estimatedWords = (post.body?.length || 0) / 5;
+            const readingTime = Math.ceil(estimatedWords / 200) || 1;
+        return {
+            ...post,
+            readingTime: `${readingTime} min read`
+        };
+        } catch {
+            return {
+                ...post,
+                readingTime: "2 min read" // default fallback
+            };
+        }
+    })
+);
+
+const allTags = postsWithReadingTime
+    .flatMap(post => post.data.tags || [])
+    .filter(Boolean);
+
+const postsByMonth = Object.groupBy(postsWithReadingTime, (post) => {
+    const date = post.data.date;
+    return date.toLocaleString("en-US", {
+        timeZone: "UTC",
+        month: "long",
+        year: "numeric",
+    });
+});
+---
+
+<Layout title="Blog">
+    <div>
+        <h1 class="page-title mb-3 font-color-pink">Blog</h1>
+
+        <TagFilter tags={allTags} />
+
+        {Object.entries(postsByMonth).map(([heading, posts]) => (
+            <div class="month-section mb-7" data-month={heading}>
+                <p class="month-header font-color-pink mb-4">{heading}</p>
+                <div class="blog-toc-container">
+                    {posts.map((post) => (
+                        <div
+                            class="blog-post-item blog-toc-item"
+                            data-post-tags={post.data.tags ? post.data.tags.join(',') : ''}
+                        >
+                            <div class="blog-toc-content">
+                                <div class="blog-toc-left">
+                                    <a href={`/${post.slug}`} class="blog-toc-title">
+                                        {post.data.title}
+                                    </a>
+                                    {post.data.tags && post.data.tags.length > 0 && (
+                                        <div class="blog-toc-tags">
+                                            {post.data.tags.map((tag) => (
+                                                <span class="post-tag-inline bg-theme-blue">{tag}</span>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                                
+                                <div class="blog-toc-dots" aria-hidden="true"></div>
+                                
+                                <div class="blog-toc-right">
+                                    <span class="blog-toc-reading-time">{post.readingTime}</span>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        ))}
+    </div>
+</Layout>

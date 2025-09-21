@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/layout.astro";
+import PortfolioItem from "../components/portfolioCard.astro";
+import StatusMessage from "../components/status.astro";
+import SectionGroup from "../components/sectionGroup.astro";
+
+let portfolioItems = [];
+let itemsByCategory = {};
+let error = null;
+
+try {
+    const { getCollection } = await import("astro:content");
+        const allItems = await getCollection("portfolio");
+        portfolioItems = allItems.filter(item => !item.data.draft);
+        itemsByCategory = Object.groupBy(portfolioItems, (item) => 
+        item.data.category || "All"
+    );
+} catch (e) {
+    error = e.message;
+    console.error("Error loading portfolio:", e);
+}
+
+const categoryOrder = ["Bookmaking", "Printmaking", "All"];
+
+// trying a different sorting method
+const sortedCategories = Object.entries(itemsByCategory).sort(([a], [b]) => {
+  const indexA = categoryOrder.indexOf(a);
+  const indexB = categoryOrder.indexOf(b);
+  
+  if (indexA === -1 && indexB === -1) return a.localeCompare(b);
+  if (indexA === -1) return 1;
+  if (indexB === -1) return -1;
+  
+  return indexA - indexB;
+});
+---
+
+<Layout title="Portfolio">
+    <h1 class="page-title font-color-pink"> Portfolio</h1>
+
+    {error && (
+        <StatusMessage
+            type="error"
+            title="Error:"
+            message={error}
+        />
+    )}
+
+    {portfolioItems.length === 0 && !error && (
+        <StatusMessage
+            type="warning"
+            title="No portfolio items found."
+            message="Make sure you have:"
+            items={[
+                "Created the <code>src/content/portfolio/</code> folder",
+                "Added at least one <code>.md</code> file in that folder",
+                "Each file has a <code>featured_image</code> field in the frontmatter",
+                "Updated your <code>src/content/config.ts</code> file",
+                "Restarted your dev server after making changes"
+            ]}
+        />
+    )}
+
+    {portfolioItems.length > 0 && (
+        <div class="space-y-3">
+            {sortedCategories.map(([category, items]) => (
+                <SectionGroup
+                    heading={category}
+                    showHeader={category !== "All"}
+                    headerClass="section-header"
+                >
+                    <div class="portfolio-grid">
+                        {items.filter(item => item && item.slug).map((item) => (
+                            <PortfolioItem item={item} />
+                        ))}
+                    </div>
+                </SectionGroup>
+            ))}
+        </div>
+    )}
+</Layout>

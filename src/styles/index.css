@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+    --color-pink: #dd7896;
+    --color-cyan: #569c9a;
+    --color-light-yellow: #fee2a3;
+    --color-gray-blue: #d0e1eb;
+    --color-gray-green: #d7e2ba;
+    --color-gray-cyan: #b8d0d2;
+    --color-gray-purple: #d3bbdf;
+    --color-gray-magenta: #a289a7;
+
+    --font-display: "InterDisplay", sans-serif;
+    --font-sans: "Lato", sans-serif;
+    --font-script: "Annie Use Your Telescope", script;
+
+    
+    
+
+}
+
+/* font-color-cyan */
+.font-color-pink {
+    color: var(--color-pink); 
+}
+
+.font-color-cyan {
+    color: var(--color-cyan); 
+}
+
+.font-color-purple {
+    color: var(--color-gray-purple); 
+}
+
+.font-color-magenta {
+    color: var(--color-gray-magenta); 
+}
+
+
+.bg-theme-pink {
+    background-color: var(--color-pink);
+}
+
+.bg-theme-yellow {
+    background-color: var(--color-light-yellow);
+}
+
+.bg-theme-blue { 
+    background-color: var(--color-gray-blue); 
+}
+
+.bg-theme-cyan { 
+    background-color: var(--color-cyan); 
+}
+
+.bg-theme-gray-cyan { 
+    background-color: var(--color-gray-cyan); 
+}
+
+
+
+
+.reenie-beanie-regular {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+@import "./global.css";
+@import "./components.css";
+@import "./utilities.css";
+

@@ -1,0 +1,63 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    item: CollectionEntry<"portfolio">;
+}
+
+const { item } = Astro.props;
+
+if (!item || !item.slug || !item.data) {
+    return null;
+}
+
+// displaying tools
+const maxToolsToShow = 3;
+const hasTools = item.data.tools && item.data.tools.length > 0;
+const showAllTools = hasTools && item.data.tools.length <= maxToolsToShow;
+const showLimitedTools = hasTools && item.data.tools.length > maxToolsToShow;
+---
+
+<div class="group">
+    <a href={`/portfolio/${item.slug}`} class="portfolio-card block">
+        <img
+            src={item.data.featured_image}
+            alt={item.data.title}
+            class="portfolio-image-natural group-hover:scale-105"
+            loading="lazy"
+        />
+
+        <div class="portfolio-overlay group-hover:bg-black/60">
+            <div class="portfolio-overlay-content group-hover:opacity-100">
+                <p class="portfolio-overlay-title font-sans text-lg font-medium mb-2">
+                    {item.data.title}
+                </p>
+                
+                {/* show all tools if 3 or fewer */}
+                {showAllTools && (
+                    <div class="flex flex-wrap gap-1">
+                        {item.data.tools.map((tool) => (
+                            <span class="portfolio-overlay-tag text-xs bg-white/20 px-2 py-1 rounded">
+                                {tool}
+                            </span>
+                        ))}
+                    </div>
+                )}
+                
+                {/* show limited tools + plus icon if more than 3 */}
+                {showLimitedTools && (
+                    <div class="flex flex-wrap items-center gap-1">
+                        {item.data.tools.slice(0, maxToolsToShow).map((tool) => (
+                            <span class="portfolio-overlay-tag text-xs bg-white/20 px-2 py-1 rounded">
+                                {tool}
+                            </span>
+                        ))}
+                        <div class="flex items-center justify-center w-6 h-6 bg-white/30 rounded-full text-white text-xs font-bold">
+                            +
+                        </div>
+                    </div>
+                )}
+            </div>
+        </div>
+    </a>
+</div>

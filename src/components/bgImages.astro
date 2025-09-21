@@ -1,0 +1,115 @@
+---
+const backgroundImages = [
+    { src: "/bg_images/Beetle1.png", alt: "Light Green Beetle" },
+    { src: "/bg_images/Butterfly1.png", alt: "Gray Purple Butterfly" },
+    { src: "/bg_images/Butterfly2.png" , alt: "Yellow Butterfly" },
+    { src: "/bg_images/Butterfly4.png", alt: "Pink Butterfly" },
+    { src: "/bg_images/Cicada1.png", alt: "Gray Purple Cicada" },
+    { src: "/bg_images/Moth1.png", alt: "Yellow Moth" },
+    { src: "/bg_images/Moth2.png", alt: "Cyan Moth" },
+    { src: "/bg_images/Moth3.png", alt: "Blue Green Moth" },
+    { src: "/bg_images/Moth4.png", alt: "Cyan Moth" },
+    { src: "/bg_images/Plant1.png", alt: "Light Blue Plant" },
+    { src: "/bg_images/Flower1.png", alt: "Light Purple Flower" },
+    { src: "/bg_images/Flower2.png", alt: "Light Blue Flower" }
+];
+---
+
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="hidden sm:block">
+    <!-- Top -->
+    <img 
+        src={backgroundImages[0]?.src} 
+        alt={backgroundImages[0]?.alt} 
+        class="absolute -top-20 -left-20 w-70 h-70 md:w-90 md:h-90 lg:w-100 lg:h-100 opacity-50 rotate-200"
+    />
+    <img 
+      src={backgroundImages[10]?.src} 
+      alt={backgroundImages[10]?.alt} 
+      class="absolute top-15 -left-10 w-10 h-10 md:w-80 md:h-80 lg:w-90 lg:h-90 opacity-20 rotate-20"
+    />
+
+    <img 
+      src={backgroundImages[11]?.src} 
+      alt={backgroundImages[11]?.alt} 
+      class="absolute -bottom-20 -left-40 w-10 h-10 md:w-100 md:h-100 lg:w-120 lg:h-120 opacity-10 rotate-20"
+    />
+    
+    <!-- Right -->
+    <img 
+        src={backgroundImages[2]?.src} 
+        alt={backgroundImages[2]?.alt} 
+        class="absolute -top-30 -right-20 w-70 h-70 md:w-110 md:h-110 lg:w-120 lg:h-120 opacity-40 rotate-330"
+    />
+    <img 
+        src={backgroundImages[3]?.src} 
+        alt={backgroundImages[3]?.alt} 
+        class="absolute -right-16 -bottom-10 w-70 h-70 md:w-80 md:h-80 lg:w-100 lg:h-100 opacity-25 rotate-270"
+    />
+    <img 
+        src={backgroundImages[9]?.src} 
+        alt={backgroundImages[9]?.alt} 
+        class="absolute -right-25 bottom-60 w-70 h-70 md:w-90 md:h-90 lg:w-100 lg:h-100 opacity-50 rotate-270"
+    />
+    
+    <!-- Bottom -->
+    <img 
+        src={backgroundImages[4]?.src} 
+        alt={backgroundImages[4]?.alt} 
+        class="absolute -bottom-40 -left-2  w-70 h-70 md:-left-10 md:w-80 md:h-80 lg:w-90 lg:h-90 opacity-30 rotate-290"
+    />
+    <img 
+        src={backgroundImages[5]?.src} 
+        alt={backgroundImages[5]?.alt} 
+        class="absolute bottom-10 -right-20 w-70 h-70 md:w-90 md:h-90 lg:w-120 lg:h-120 opacity-25 rotate-180"
+    />
+    
+    <!-- Left -->
+    <img 
+        src={backgroundImages[8]?.src} 
+        alt={backgroundImages[8]?.alt} 
+        class="absolute -left-25 top-1/4 w-70 h-70 md:w-90 md:h-90 lg:w-100 lg:h-100 opacity-20 -rotate-100"
+    />
+
+
+</div>
+
+    <!-- Mobile -->
+    <div class="sm:hidden">
+        <img 
+            src={backgroundImages[0]?.src} 
+            alt={backgroundImages[0]?.alt} 
+            class="absolute top-10 -right-10 w-60 h-60 opacity-20 rotate-60"
+        />
+        <img 
+            src={backgroundImages[1]?.src} 
+            alt={backgroundImages[1]?.alt} 
+            class="absolute top-20 -left-6 w-50 h-50 opacity-10 rotate-40"
+        />
+
+        <!-- Mid-screen -->
+        <img 
+            src={backgroundImages[7]?.src} 
+            alt={backgroundImages[7]?.alt} 
+            class="absolute top-1/2 -right-20 w-50 h-50 opacity-15 rotate-170"
+        />
+        <img 
+            src={backgroundImages[3]?.src} 
+            alt={backgroundImages[3]?.alt} 
+            class="absolute -bottom-10 -left-10 w-90 h-90 opacity-15 rotate-0"
+        />
+
+        <!-- Bottom -->
+        <img 
+            src={backgroundImages[4]?.src} 
+            alt={backgroundImages[4]?.alt} 
+            class="absolute -bottom-10 -right-20 w-70 h-70 opacity-15 -rotate-200"
+        />
+        <img 
+            src={backgroundImages[5]?.src} 
+            alt={backgroundImages[5]?.alt} 
+            class="absolute bottom-48 -left-25 w-70 h-70 opacity-25 rotate-90"
+        />
+    </div>
+
+</div>

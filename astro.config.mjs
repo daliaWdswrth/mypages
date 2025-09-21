@@ -1,5 +1,23 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from "astro/config";
 
-// https://astro.build/config
-export default defineConfig({});
+import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite";
+
+
+
+export default defineConfig({
+    site: "http://www.daliawadsworth.com/",
+    integrations: [sitemap()],
+    trailingSlash: "never",
+
+    vite: {
+        plugins: [tailwindcss()],
+    },
+
+
+    devToolbar: {
+        enabled: false,
+    }
+
+
+  });

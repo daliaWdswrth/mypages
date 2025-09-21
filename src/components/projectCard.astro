@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="project-card">
+    <p class="mt-6 underline">
+        <a href={`/projects/${project.slug}`} class="project-title">
+            {project.data.title}
+        </a>
+    </p>
+
+    {project.data.technologies && project.data.technologies.length > 0 && (
+        <div class="mt-3 flex flex-wrap gap-2">
+            {project.data.technologies.map((tech) => (
+                <span class="tech-tag">{tech}</span>
+            ))}
+        </div>
+    )}
+
+    <div class="project-links mt-2">
+        {project.data.github && (
+            <a href={project.data.github} target="_blank" class="project-link">
+                GitHub
+            </a>
+        )}
+        {project.data.live && (
+            <a href={project.data.live} target="_blank" class="project-link--live">
+                Live Demo
+            </a>
+        )}
+    </div>
+</div>

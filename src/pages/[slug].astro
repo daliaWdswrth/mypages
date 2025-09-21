@@ -1,0 +1,24 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Entry from "../components/entry.astro";
+import Layout from "../layouts/layout.astro";
+import { getPosts } from "../lib/posts";
+
+export const getStaticPaths = (async () => {
+    const entries = [
+        ...(await getPosts({ includeDrafts: true })),
+        ...(await getCollection("pages")).filter((entry) => entry.slug !== "index"),
+    ];
+    return entries.map((entry) => ({
+        params: { slug: entry.slug },
+        props: { entry },
+    }));
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+---
+
+<Layout title={entry.data.title!}>
+    <Entry entry={entry} />
+</Layout>

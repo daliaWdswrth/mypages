@@ -1,0 +1,41 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Prose from "./prose.astro";
+
+interface Props {
+    entry: CollectionEntry<"posts"> | CollectionEntry<"pages"> | CollectionEntry<"projects"> | CollectionEntry<"portfolio">;
+    preview?: boolean;
+}
+
+const { entry, preview = false } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<div class="">
+    {
+        entry.collection === "posts" && (
+            <>
+                <h1 class="text-6xl font-bold font-script font-color-pink mb-3">
+                    {entry.data.title}
+                </h1>
+                {entry.data.date && (
+                    <time class="text-gray-500">
+                        {entry.data.date.toLocaleString("en-US", {
+                            timeZone: "UTC",
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                        })}
+                    </time>
+                )}
+            </>
+        )
+    }
+</div>
+
+<div class:list={[entry.collection === "posts" ? "mt-7" : "mt-2"]}>
+    <Prose>
+        <Content />
+    </Prose>
+</div>
+

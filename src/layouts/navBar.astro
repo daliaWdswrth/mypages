@@ -1,0 +1,28 @@
+---
+import MyImage from "../components/myImage.astro";
+import NavLink from "../components/nav.astro";
+---
+
+<nav class="hidden sm:block sm:sticky sm:top-0 sm:pt-16 pl-8 pr-6 sm:h-screen sm:overflow-y-auto">
+    <MyImage />
+
+    <div class="pr-1">
+        <ul class="mt-0.5 sm:mt-4 space-x-1.5 sm:space-x-0">
+            <NavLink href="/blog" variant="primary">Blog</NavLink>
+            <NavLink href="/projects" variant="primary">Projects</NavLink>
+            <NavLink href="/portfolio" variant="primary">Portfolio</NavLink>
+        </ul>
+
+        <ul class="mt-4 space-x-1.5 sm:space-x-0">
+            <NavLink href="mailto:.@tufts.edu" variant="secondary">
+                Email
+            </NavLink>
+            <NavLink href="https://www.linkedin.com/in/dalia-wadsworth-80b36922a/" variant="secondary">
+                LinkedIn
+            </NavLink>
+            <NavLink href="https://github.com/daliaWdswrth" variant="secondary">
+                GitHub
+            </NavLink>
+        </ul>
+    </div>
+</nav>

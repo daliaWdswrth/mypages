@@ -1,0 +1,21 @@
+---
+interface Props {
+    type: "error" | "warning";
+    title: string;
+    message?: string;
+    items?: string[];
+}
+
+const { type, title, message, items } = Astro.props;
+const cssClass = type === "error" ? "status-error" : "status-warning";
+---
+
+<div class={cssClass}>
+    <p><strong>{title}</strong></p>
+    {message && <p>{message}</p>}
+    {items && items.length > 0 && (
+        <ul class="status-list">
+            {items.map((item) => <li set:html={item} />)}
+        </ul>
+    )}
+</div>

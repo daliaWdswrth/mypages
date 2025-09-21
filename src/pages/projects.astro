@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/layout.astro";
+import ProjectCard from "../components/projectCard.astro";
+import StatusMessage from "../components/status.astro";
+
+let projects = [];
+let error = null;
+
+const { getCollection } = await import("astro:content");
+const allProjects = await getCollection("projects");
+projects = allProjects
+.filter(project => !project.data.draft)
+.sort((a, b) => {
+    // sort by date (newest first) but don't group by month/year
+    const dateA = a.data.date ? a.data.date.getTime() : 0;
+    const dateB = b.data.date ? b.data.date.getTime() : 0;
+    return dateB - dateA;
+});
+---
+
+<Layout title="Projects">
+    <h1 class="page-title font-color-pink">Projects</h1>
+
+    {error && (
+        <StatusMessage 
+            type="error" 
+            title="Error:" 
+            message={error} 
+        />
+    )}
+
+    {projects.length === 0 && !error && (
+        <StatusMessage 
+            type="warning"
+            title="No projects found."
+            message="Make sure you have:"
+            items={[
+                "Created the <code>src/content/projects/</code> folder",
+                "Added at least one <code>.md</code> file in that folder", 
+                "Updated your <code>src/content/config.ts</code> file",
+                "Restarted your dev server after making changes"
+            ]}
+        />
+    )}
+
+    {projects.length > 0 && (
+        <div class="mt-9">
+            {projects.map((project) => (
+                <ProjectCard project={project} />
+            ))}
+        </div>
+    )}
+</Layout>
