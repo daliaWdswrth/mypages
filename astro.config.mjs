@@ -8,6 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
     site: "http://www.daliawadsworth.com/",
     integrations: [sitemap()],
+    adapter: vercel(),
     trailingSlash: "never",
 
     vite: {
