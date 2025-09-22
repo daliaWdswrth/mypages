@@ -19,6 +19,6 @@ We decided on a CMY color scheme. We started with blue (cyan).
 
 Then came magenta, and finally yellow. Each edition works as its own “quilt” print, but once we finished them all, we laid them out together to form an even bigger version—so big we barely had enough space to document it.
 
-<img src="/media/quilt_print/quilt3.JPG" alt="isolated" width="300"/>
+<img src="/media/quilt_print/quilt3.jpg" alt="isolated" width="300"/>
 
 <img src="/media/quilt_print/quilt4.JPG" alt="isolated" width="300"/>
