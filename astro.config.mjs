@@ -1,5 +1,5 @@
 import { defineConfig, envField } from "astro/config";
-
+import vercel from '@astrojs/vercel';
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -17,7 +17,11 @@ export default defineConfig({
 
     devToolbar: {
         enabled: false,
-    }
+    },
+
+    adapter: vercel({
+        imageService: true,
+    }),
 
 
   });
