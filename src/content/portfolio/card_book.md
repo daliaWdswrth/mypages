@@ -1,6 +1,6 @@
 ---
 title: "Cardinal Order"
-featured_image: "/src/assets/card_book/card1.png"
+featured_image: "/media/card_book/card1.png"
 category: "Bookmaking"
 book_pages: []
 tools: ["Adobe Photoshop", "Linocut", "Risograph"]
@@ -16,17 +16,17 @@ For me, turning the deck into an accordion book with card pockets was a way to s
 Here's a look into the printing process:
 I first did a mock-up of the accordion book, measuring space for the pockets to hold each card and deciding the dimensions of the covers.
 
-<img src="/src/assets/card_book/card4.JPG" alt="isolated" width="200"/>
+<img src="/media/card_book/card4.JPG" alt="isolated" width="200"/>
 
 After sketching the design of each card, I carved them into linoleum blocks and did some proofs on small sheets of scratch paper.
 
-<img src="/src/assets/card_book/card2.JPG" alt="isolated" width="200"/>
+<img src="/media/card_book/card2.JPG" alt="isolated" width="200"/>
 
 Then, after completing designs for the back and front border of the cards, I printed them using the riso-printer and, once dry, stamped them with the linocut blocks.
 
-<img src="/src/assets/card_book/card3.JPG" alt="isolated" width="200"/>
+<img src="/media/card_book/card3.JPG" alt="isolated" width="200"/>
 
 For the accordion book, I cut and folded the pages and pockets before glueing them together. I made sure the cards fit before doing the front and back covers and assembled the book once everything was dry. 
 
 ## The Result
-<img src="/src/assets/card_book/card5.JPG" alt="isolated" width="200"/>
+<img src="/media/card_book/card5.JPG" alt="isolated" width="200"/>

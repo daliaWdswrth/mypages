@@ -1,13 +1,13 @@
 ---
 title: "Alphabet Book"
-featured_image: "/src/assets/alpha_book/alpha1.png"
+featured_image: "/media/alpha_book/alpha1.png"
 category: "Bookmaking"
 book_pages: [
-    { src: "/src/assets/alpha_book/alpha2.png", span: 'double'},
-    { src: "/src/assets/alpha_book/alpha3.png", span: 'double'},
-    { src: "/src/assets/alpha_book/alpha4.png", span: 'double'},
-    { src: "/src/assets/alpha_book/alpha5.png", span: 'double'},
-    { src: "/src/assets/alpha_book/alpha-last.png", span: 'double'},
+    { src: "/media/alpha_book/alpha2.png", span: 'double'},
+    { src: "/media/alpha_book/alpha3.png", span: 'double'},
+    { src: "/media/alpha_book/alpha4.png", span: 'double'},
+    { src: "/media/alpha_book/alpha5.png", span: 'double'},
+    { src: "/media/alpha_book/alpha-last.png", span: 'double'},
 ]
 tools: ["Risograph", "Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign"]
 type: "book"

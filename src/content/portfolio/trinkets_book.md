@@ -1,13 +1,13 @@
 ---
 title: "Trinkets"
-featured_image: "/src/assets/trinkets_book/trinkets1.png"
+featured_image: "/media/trinkets_book/trinkets1.png"
 category: "Bookmaking"
 book_pages: [
-    { src: "/src/assets/trinkets_book/trinkets2.png", span: 'double'},
-    { src: "/src/assets/trinkets_book/trinkets3.png", span: 'double'},
-    { src: "/src/assets/trinkets_book/trinkets4.png", span: 'double'},
-    { src: "/src/assets/trinkets_book/trinkets5.png", span: 'double'},
-    { src: "/src/assets/trinkets_book/trinkets6.png", span: 'double'},
+    { src: "/media/trinkets_book/trinkets2.png", span: 'double'},
+    { src: "/media/trinkets_book/trinkets3.png", span: 'double'},
+    { src: "/media/trinkets_book/trinkets4.png", span: 'double'},
+    { src: "/media/trinkets_book/trinkets5.png", span: 'double'},
+    { src: "/media/trinkets_book/trinkets6.png", span: 'double'},
 ]
 tools: ["Adobe InDesign", "Adobe Photoshop", Risograph, "Adobe Lightroom"]
 type: "book"
@@ -21,8 +21,8 @@ Please [contact me](mailto:dalia.wadsworth@tufts.edu) for a viewing of the whole
 
 ## Some Documentation:
 
-<img src="/src/assets/trinkets_book/trinkets1-p.JPG" alt="isolated" width="300"/>
+<img src="/media/trinkets_book/trinkets1-p.JPG" alt="isolated" width="300"/>
 
-<img src="/src/assets/trinkets_book/trinkets2-p.JPG" alt="isolated" width="300"/>
+<img src="/media/trinkets_book/trinkets2-p.JPG" alt="isolated" width="300"/>
 
-<img src="/src/assets/trinkets_book/trinkets3-p.JPG" alt="isolated" width="300"/>
+<img src="/media/trinkets_book/trinkets3-p.JPG" alt="isolated" width="300"/>

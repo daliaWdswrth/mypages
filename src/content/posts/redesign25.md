@@ -14,15 +14,15 @@ There were a few things I knew I needed to change:
 
 1. On the page, "Projects," displaying my graphic design and other visual artwork, you couldn't interact with the images to understand what the work was about, how it was made, when I made it, etc. Not very helpful for understanding my process. 
 
-![Projects Page](/src/assets/post1/projects-pp.png)
+![Projects Page](/media/post1/projects-pp.png)
 
 2. The "Coding" page ... I don't even want to talk about it. It got the job done (barely) but there was too much text, everything looked crowded and trying to view the projects in a slideshow was a hassle. Here too, I wasn't giving enough explanation for the work or my process.
 
-![Coding Page](/src/assets/post1/coding-pp.png)
+![Coding Page](/media/post1/coding-pp.png)
 
 3. The overall design was bugging me. I wanted something more spacious with a lighter color palette and more visual elements and interactivity to engage the viewer. During my design process, I also came to the realization that the theme just felt like it didn't fit my personal style anymore, I craved something more vibrant and playful while still aiming to maintain a level of sophistication.
 
-![Home Page](/src/assets/post1/home-pp.png)
+![Home Page](/media/post1/home-pp.png)
 
 4. As someone who's been interested in blog content, I wanted to start one of my own and I knew it would be easier to do starting fresh.
 
@@ -30,7 +30,7 @@ There were a few things I knew I needed to change:
 
 I liked the fonts I used (`Lato` and `Prompt`) and didn't mind the small-screen version of the nav-bar so a version of that exists on this site. Originally, I'd planned to include more elements of the old site—as you can see in my early mock-ups in Figma:
 
-![Figma Mockup 1](/src/assets/post1/figma1-pp.png)
+![Figma Mockup 1](/media/post1/figma1-pp.png)
 
 But as I continued to brainstorm and search for more ideas, the design began to shift away from that.
 
@@ -39,7 +39,7 @@ But as I continued to brainstorm and search for more ideas, the design began to 
 During college, I became pretty hyperfixated on bugs (I'll write a post on that later) and started incorporating imagery of them within my art practice. I made screen-prints, zines, books, risograph prints, posters, collages, and more all about bugs (you can probably find some in my [portfolio](/portfolio)). At this point, I had lots of drawings already on-hand and the butterfly image—that now functions as my "logo"—caught my eye. The entire design of the site came together around it.
 
 Here's a early snapshot of my mood-board:
-![Mood Board](/src/assets/post1/brainstorm-pp.png)
+![Mood Board](/media/post1/brainstorm-pp.png)
 
 Deciding on an appropriate tech-stack was a little more tricky. I wanted a framework that functioned well with [Tailwind-CSS](https://tailwindcss.com/), to benefit from more flexible styling, while also allowing for easy content management and publishing. That's when I came across this [blog post](https://manuelmoreale.com/pb-ben-borgers) by [Manuel Moreale](https://manuelmoreale.com/about), who runs a blog about blogs that I've been following for quite a while. 
 

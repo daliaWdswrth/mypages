@@ -17,6 +17,6 @@ It utilizes a Lidar sensor for hand-tracking which then displaces particles in r
 ### Demo
 
 <video controls width="50%">
-  <source src="/src/assets/vids/cloudVid.mp4" type="video/mp4">
+  <source src="/media/vids/cloudVid.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

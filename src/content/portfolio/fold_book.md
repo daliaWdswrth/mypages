@@ -1,14 +1,14 @@
 ---
 title: "Deep Sea"
-featured_image: "/src/assets/fold_book/fold1.png"
+featured_image: "/media/fold_book/fold1.png"
 category: "Bookmaking"
 book_pages: [
-    { src: "/src/assets/fold_book/fold2.png", span: 'double'},
-    { src: "/src/assets/fold_book/fold3.png", span: 'double'},
-    { src: "/src/assets/fold_book/fold4.png", span: 'double'},
-    { src: "/src/assets/fold_book/fold5.png", span: 'double'},
-    { src: "/src/assets/fold_book/fold6.png", span: 'double'},
-    { src: "/src/assets/fold_book/fold7.png", span: 'double'},
+    { src: "/media/fold_book/fold2.png", span: 'double'},
+    { src: "/media/fold_book/fold3.png", span: 'double'},
+    { src: "/media/fold_book/fold4.png", span: 'double'},
+    { src: "/media/fold_book/fold5.png", span: 'double'},
+    { src: "/media/fold_book/fold6.png", span: 'double'},
+    { src: "/media/fold_book/fold7.png", span: 'double'},
 ]
 tools: ["Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop", "Risograph", "Linocut"]
 type: "book"
@@ -23,15 +23,15 @@ The folds and the structure of the book itself are meant to emulate the sensatio
 Here's a look into the printing process:
 I was drawn to Turkish map folding and the way the folds created interesting shadows on the page so I experimented with it to see what it would look like in a book. It was clear that this would be a good fit for the concept of the bok. This is an early sample:
 
-<img src="/src/assets/fold_book/fold8.JPG" alt="isolated" width="400"/>
+<img src="/media/fold_book/fold8.JPG" alt="isolated" width="400"/>
 
 I decided an accordion-style book within the box would work well with the folded pages to allow each to be view fully when pulled out and compress nicely together when put back in. I did a full mock-up of the book to make sure I had the correct dimensions for the pages and box. 
 
-<img src="/src/assets/fold_book/fold9.JPG" alt="isolated" width="400"/>
+<img src="/media/fold_book/fold9.JPG" alt="isolated" width="400"/>
 
 After that, I began working on the imagery. I cut the linoleum blocks and completed the reliefs before finalizing my designs for the riso-prints in Photoshop. Once everything was printed, I assembled the book.
 
-<img src="/src/assets/fold_book/fold10.JPG" alt="isolated" width="400"/>
-<img src="/src/assets/fold_book/fold11.JPG" alt="isolated" width="400"/>
-<img src="/src/assets/fold_book/fold12.JPG" alt="isolated" width="400"/>
+<img src="/media/fold_book/fold10.JPG" alt="isolated" width="400"/>
+<img src="/media/fold_book/fold11.JPG" alt="isolated" width="400"/>
+<img src="/media/fold_book/fold12.JPG" alt="isolated" width="400"/>
 

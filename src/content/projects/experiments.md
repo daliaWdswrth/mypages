@@ -13,18 +13,18 @@ These projects explore how people can directly manipulate digital visuals. My in
 
 ## Demo 1: Creating an Interactive Poster Design
 <video controls width="100%" muted>
-  <source src="/src/assets/vids/posterVid.mp4" type="video/mp4">
+  <source src="/media/vids/posterVid.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ## Demo 2: Light Show Concept
 <video controls width="100%" muted>
-  <source src="/src/assets/vids/lightshowVid.mp4" type="video/mp4">
+  <source src="/media/vids/lightshowVid.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ## Demo 3: Weather Particle System
 <video controls width="100%" muted>
-  <source src="/src/assets/vids/weatherVid.mp4" type="video/mp4">
+  <source src="/media/vids/weatherVid.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

@@ -1,31 +1,31 @@
 ---
 title: "Mapping Journeys"
-featured_image: "/src/assets/journey_book/journeyB.png"
+featured_image: "/media/journey_book/journeyB.png"
 category: "Bookmaking"
 book_pages: [
-    "/src/assets/journey_book/cover_mapB.png", 
-    "/src/assets/journey_book/page2_mapB.png", 
-    "/src/assets/journey_book/page3_mapB.png", 
-    "/src/assets/journey_book/page4_mapB.png", 
-    "/src/assets/journey_book/page5_mapB.png", 
-    { src: "/src/assets/journey_book/page6-7_mapB.png", span: 'double'}, 
-    "/src/assets/journey_book/page8_mapB.png",
-    "/src/assets/journey_book/page9_mapB.png",
-    "/src/assets/journey_book/page10_mapB.png",
-    "/src/assets/journey_book/page11_mapB.png",
-    "/src/assets/journey_book/page12_mapB.png",
-    "/src/assets/journey_book/page13_mapB.png",
-    "/src/assets/journey_book/page14_mapB.png",
-    "/src/assets/journey_book/page15_mapB.png",
-    "/src/assets/journey_book/page16_mapB.png",
-    "/src/assets/journey_book/page17_mapB.png",
-    { src: "/src/assets/journey_book/page18-19_mapB.png", span: 'double'},
-    "/src/assets/journey_book/page20_mapB.png",
-    "/src/assets/journey_book/page21_mapB.png",
-    "/src/assets/journey_book/page22_mapB.png",
-    "/src/assets/journey_book/page23_mapB.png",
-    "/src/assets/journey_book/page24_mapB.png",
-    { src: "/src/assets/journey_book/colophon_mapB.png", span: 'double'}]
+    "/media/journey_book/cover_mapB.png", 
+    "/media/journey_book/page2_mapB.png", 
+    "/media/journey_book/page3_mapB.png", 
+    "/media/journey_book/page4_mapB.png", 
+    "/media/journey_book/page5_mapB.png", 
+    { src: "/media/journey_book/page6-7_mapB.png", span: 'double'}, 
+    "/media/journey_book/page8_mapB.png",
+    "/media/journey_book/page9_mapB.png",
+    "/media/journey_book/page10_mapB.png",
+    "/media/journey_book/page11_mapB.png",
+    "/media/journey_book/page12_mapB.png",
+    "/media/journey_book/page13_mapB.png",
+    "/media/journey_book/page14_mapB.png",
+    "/media/journey_book/page15_mapB.png",
+    "/media/journey_book/page16_mapB.png",
+    "/media/journey_book/page17_mapB.png",
+    { src: "/media/journey_book/page18-19_mapB.png", span: 'double'},
+    "/media/journey_book/page20_mapB.png",
+    "/media/journey_book/page21_mapB.png",
+    "/media/journey_book/page22_mapB.png",
+    "/media/journey_book/page23_mapB.png",
+    "/media/journey_book/page24_mapB.png",
+    { src: "/media/journey_book/colophon_mapB.png", span: 'double'}]
 
 tools: ["Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop", "Risograph"]
 type: "book"

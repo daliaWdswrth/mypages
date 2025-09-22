@@ -1,6 +1,6 @@
 ---
 title: "Screenprint Quilt"
-featured_image: "/src/assets/quilt_print/quilt.png"
+featured_image: "/media/quilt_print/quilt.png"
 category: "Printmaking"
 tools: ["Screenprinting", "Adobe Photoshop"]
 draft: false
@@ -13,12 +13,12 @@ The featured image above is of only one of the four editions of this print. Each
 
 We decided on a CMY color scheme. We started with blue (cyan).
 
-<img src="/src/assets/quilt_print/quilt1.JPG" alt="isolated" width="300"/>
+<img src="/media/quilt_print/quilt1.JPG" alt="isolated" width="300"/>
 
-<img src="/src/assets/quilt_print/quilt2.JPG" alt="isolated" width="300"/>
+<img src="/media/quilt_print/quilt2.JPG" alt="isolated" width="300"/>
 
 Then came magenta, and finally yellow. Each edition works as its own “quilt” print, but once we finished them all, we laid them out together to form an even bigger version—so big we barely had enough space to document it.
 
-<img src="/src/assets/quilt_print/quilt3.JPG" alt="isolated" width="300"/>
+<img src="/media/quilt_print/quilt3.JPG" alt="isolated" width="300"/>
 
-<img src="/src/assets/quilt_print/quilt4.JPG" alt="isolated" width="300"/>
+<img src="/media/quilt_print/quilt4.JPG" alt="isolated" width="300"/>

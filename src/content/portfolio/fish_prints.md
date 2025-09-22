@@ -1,6 +1,6 @@
 ---
 title: "In the Pond"
-featured_image: "/src/assets/fish_print/fish1.png"
+featured_image: "/media/fish_print/fish1.png"
 category: "Printmaking"
 tools: ["Lithography"]
 draft: false

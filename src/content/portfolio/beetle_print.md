@@ -1,6 +1,6 @@
 ---
 title: "Beetle Reduction"
-featured_image: "/src/assets/reduction_print/bugs3.png"
+featured_image: "/media/reduction_print/bugs3.png"
 category: Printmaking
 tools: ["Screenprinting"]
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: "Look!"
-featured_image: "/src/assets/look_book/look1.png"
+featured_image: "/media/look_book/look1.png"
 category: "Bookmaking"
 book_pages: []
 tools: ["Adobe Illustrator", "Adobe Photoshop", "Risograph"]
@@ -8,7 +8,7 @@ type: "book"
 draft: false
 ---
 
-<img src="/src/assets/look_book/look2.png" alt="isolated" width="400"/>
+<img src="/media/look_book/look2.png" alt="isolated" width="400"/>
 
 **Featured in the SMFA Print and Paper Exhibition (2025)**
 

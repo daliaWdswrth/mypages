@@ -1,6 +1,6 @@
 ---
 title: "Seeing Red"
-featured_image: "/src/assets/ppm_book/ppm1.png"
+featured_image: "/media/ppm_book/ppm1.png"
 category: "Bookmaking"
 book_pages: []
 tools: ["Handmade Paper"]
@@ -8,7 +8,7 @@ type: "book"
 draft: false
 ---
 
-<img src="/src/assets/ppm_book/ppm2.png" alt="isolated" width="500"/>
+<img src="/media/ppm_book/ppm2.png" alt="isolated" width="500"/>
 
 **Featured in the SMFA Print and Paper Exhibition (2025)**
 
