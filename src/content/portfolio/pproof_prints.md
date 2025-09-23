@@ -19,5 +19,5 @@ This is a series of relief prints carved from a linoleum block and printed on pa
 
 ## Some Documentation:
 
-<img src="/media/relief1/relief-p1.jpg" alt="isolated" width="300"/>
-<img src="/media/relief1/relief-p2.jpg" alt="isolated" width="300"/>
+<img src="/public/media/relief1/relief-p1.jpg" alt="isolated" width="300"/>
+<img src="/public/media/relief1/relief-p2.jpg" alt="isolated" width="300"/>
