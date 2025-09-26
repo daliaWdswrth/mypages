@@ -3,26 +3,23 @@ import vercel from '@astrojs/vercel';
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
-
-
 export default defineConfig({
     site: "http://www.daliawadsworth.com/",
-    integrations: [sitemap()],
-    adapter: vercel(),
-    trailingSlash: "never",
-
-    vite: {
-        plugins: [tailwindcss()],
-    },
-
-
-    devToolbar: {
-        enabled: false,
-    },
-
+    title: "Dalia Wadsworth",
+    integrations: [
+        sitemap(), 
+    ],
     adapter: vercel({
         imageService: true,
     }),
-
-
-  });
+    trailingSlash: "never",
+    
+    vite: {
+        plugins: [tailwindcss()],
+    },
+    
+    devToolbar: {
+        enabled: false,
+    },
+    
+});
