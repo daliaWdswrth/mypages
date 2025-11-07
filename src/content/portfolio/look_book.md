@@ -1,7 +1,7 @@
 ---
 title: "Look!"
 featured_image: "/media/look_book/look1.png"
-category: "Bookmaking"
+category: "Book Design"
 book_pages: []
 tools: ["Adobe Illustrator", "Adobe Photoshop", "Risograph"]
 type: "book"

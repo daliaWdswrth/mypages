@@ -1,7 +1,7 @@
 ---
 title: "Mapping Journeys"
 featured_image: "/media/journey_book/journeyB.png"
-category: "Bookmaking"
+category: "Book Design"
 book_pages: [
     "/media/journey_book/cover_mapB.png", 
     "/media/journey_book/page2_mapB.png", 

@@ -1,7 +1,7 @@
 ---
 title: "Alphabet Book"
 featured_image: "/media/alpha_book/alpha1.png"
-category: "Bookmaking"
+category: "Book Design"
 book_pages: [
     { src: "/media/alpha_book/alpha2.png", span: 'double'},
     { src: "/media/alpha_book/alpha3.png", span: 'double'},

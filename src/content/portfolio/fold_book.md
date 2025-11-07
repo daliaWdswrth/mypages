@@ -1,7 +1,7 @@
 ---
 title: "Deep Sea"
 featured_image: "/media/fold_book/fold1.png"
-category: "Bookmaking"
+category: "Book Design"
 book_pages: [
     { src: "/media/fold_book/fold2.png", span: 'double'},
     { src: "/media/fold_book/fold3.png", span: 'double'},

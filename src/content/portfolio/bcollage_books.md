@@ -1,7 +1,7 @@
 ---
 title: "Reframing: A Photo Collage"
 featured_image: "/media/bug_collage/bug1.jpg"
-category: "Bookmaking"
+category: "Book Design"
 book_pages: ["/media/bug_collage/bug1.jpg", "/media/bug_collage/bug2.jpg", "/media/bug_collage/bug3.jpg", "/media/bug_collage/bug4.jpg", "/media/bug_collage/bug5.jpg", "/media/bug_collage/bug6.jpg", "/media/bug_collage/bug7.jpg", "/media/bug_collage/bug8.jpg"]
 tools: ["Procreate", "Adobe Lightroom", "Adobe Photoshop"]
 type: "book"

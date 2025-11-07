@@ -1,7 +1,7 @@
 ---
 title: "Trinkets"
 featured_image: "/media/trinkets_book/trinkets1.png"
-category: "Bookmaking"
+category: "Book Design"
 book_pages: [
     { src: "/media/trinkets_book/trinkets2.png", span: 'double'},
     { src: "/media/trinkets_book/trinkets3.png", span: 'double'},

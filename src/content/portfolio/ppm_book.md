@@ -1,7 +1,7 @@
 ---
 title: "Seeing Red"
 featured_image: "/media/ppm_book/ppm1.png"
-category: "Bookmaking"
+category: "Book Design"
 book_pages: []
 tools: ["Handmade Paper"]
 type: "book"

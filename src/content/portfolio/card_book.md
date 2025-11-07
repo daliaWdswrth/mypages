@@ -1,7 +1,7 @@
 ---
 title: "Cardinal Order"
 featured_image: "/media/card_book/card1.png"
-category: "Bookmaking"
+category: "Book Design"
 book_pages: []
 tools: ["Adobe Photoshop", "Linocut", "Risograph"]
 type: "book"

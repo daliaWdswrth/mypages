@@ -1,7 +1,7 @@
 ---
 title: "Butterfly or Moth"
 featured_image: "/media/borm_book/Bm1.png"
-category: "Bookmaking"
+category: "Book Design"
 book_pages: ["/media/borm_book/Bm1.png", "/media/borm_book/Bm2.png", "/media/borm_book/Bm3.png", "/media/borm_book/Bm4.png", "/media/borm_book/Bm5.png", "/media/borm_book/Bm6.png", "/media/borm_book/Bm7.png", "/media/borm_book/Bm1.png"]
 tools: [Procreate, Adobe Photoshop, Screenprinting]
 type: "book"

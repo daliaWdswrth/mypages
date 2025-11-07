@@ -1,7 +1,7 @@
 ---
 title: "Bug Poetry"
 featured_image: "/media/poetry_book/Bp1.png"
-category: "Bookmaking"
+category: "Book Design"
 book_pages: ["/media/poetry_book/Bp1.png", "/media/poetry_book/Bp2.png", "/media/poetry_book/Bp3.png", "/media/poetry_book/Bp4.png", "/media/poetry_book/Bp5.png", "/media/poetry_book/Bp6.png", "/media/poetry_book/Bp7.png", "/media/poetry_book/Bp1.png"]
 tools: [Procreate, Adobe Photoshop, Screenprint]
 type: "book"
