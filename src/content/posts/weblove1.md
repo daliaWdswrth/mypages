@@ -8,7 +8,7 @@ I've been wanting to make a blog for a while but the minute I finished building 
 
 Today's website is: [**Bookshelf Town**](https://bookshelf.town/)
 
-![Bookshelf Town Homepage](/public/media/post2/home.png)
+![Bookshelf Town Homepage](/media/post2/home.png)
 
 I like reading but I've often found it difficult to stick to a method/app to track what I've read and enjoyed. It hasn't really bothered me but every now and then when books come up in conversation or I'm trying to remember a quote or scene to reference, I have a hard time remembering the specifics and wish I'd wrote it down somewhere.
 
@@ -22,7 +22,7 @@ It's clean, concise, and gives you everything you need to start documenting your
 
 I do have some issues with the site, one of them being that currently, I can only see the books I've finished for the single year that I've specified in my settings with no option to see all the books I've completed regardless of the year. It's not a necessary function, but it would be nice to add. Also, when adding a book, you're searching through their database of books already populated by other readers, which isn't a problem except that there's no standard for naming titles or authors and no method for validating input, so you get results like this:
 
-![Bookshelf Town Searching](/public/media/post2/search.png)
+![Bookshelf Town Searching](/media/post2/search.png)
 
 Overall, though, it's a great alternative to many of the other reading apps and tools out there. It's still in progress, so I can't wait to see what else they add, and I'll definitely be using it in the meantime. If you like reading or are looking to get into it, I hope you give it a try!
 
