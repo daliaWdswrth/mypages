@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-    site: "http://www.daliawadsworth.com/",
+    site: "http://www.daliasblog.com/",
     title: "Dalia Wadsworth",
     integrations: [
         sitemap(), 
