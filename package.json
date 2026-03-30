@@ -7,11 +7,11 @@
     "build:css": "tailwindcss -i ./src/styles/global.css -o ./dist/output.css --minify"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.5.1",
-    "@astrojs/vercel": "^8.0.4",
+    "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/vercel": "^10.0.3",
     "@tailwindcss/vite": "^4.1.12",
     "@vercel/analytics": "^1.5.0",
-    "astro": "^5.13.3"
+    "astro": "^6.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

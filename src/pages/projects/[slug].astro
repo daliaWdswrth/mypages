@@ -8,7 +8,7 @@ export const getStaticPaths = (async () => {
     const projects = await getProjects({ includeDrafts: true });
 
     return projects.map((project) => ({
-        params: { slug: project.slug },
+        params: { slug: project.id },
         props: { entry: project },
     }));
 }) satisfies GetStaticPaths;
@@ -21,7 +21,6 @@ const { entry } = Astro.props;
         <h1 class="text-4xl font-medium mb-3">
             {entry.data.title}
         </h1>
-
 
         {entry.data.technologies && entry.data.technologies.length > 0 && (
             <div class="mt-3">

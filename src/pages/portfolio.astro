@@ -70,7 +70,7 @@ const sortedCategories = Object.entries(itemsByCategory).sort(([a], [b]) => {
                     headerClass="section-header"
                 >
                     <div class="portfolio-grid">
-                        {items.filter(item => item && item.slug).map((item) => (
+                        {items.filter(item => item && item.id).map((item) => (
                             <PortfolioItem item={item} />
                         ))}
                     </div>

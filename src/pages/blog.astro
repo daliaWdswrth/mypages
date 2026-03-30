@@ -55,7 +55,7 @@ const postsByMonth = Object.groupBy(postsWithReadingTime, (post) => {
                         >
                             <div class="blog-toc-content">
                                 <div class="blog-toc-left">
-                                    <a href={`/${post.slug}`} class="blog-toc-title">
+                                    <a href={`/${post.id}`} class="blog-toc-title">
                                         {post.data.title}
                                     </a>
                                     {post.data.tags && post.data.tags.length > 0 && (

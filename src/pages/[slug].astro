@@ -8,10 +8,10 @@ import { getPosts } from "../lib/posts";
 export const getStaticPaths = (async () => {
     const entries = [
         ...(await getPosts({ includeDrafts: true })),
-        ...(await getCollection("pages")).filter((entry) => entry.slug !== "index"),
+        ...(await getCollection("pages")).filter((entry) => entry.id !== "index"),
     ];
     return entries.map((entry) => ({
-        params: { slug: entry.slug },
+        params: { slug: entry.id },
         props: { entry },
     }));
 }) satisfies GetStaticPaths;
